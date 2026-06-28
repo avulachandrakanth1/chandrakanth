@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === "production";
 
-const repoName = "ashwath-devops-portfolio";
+const repoName = "chandrakanth";
 
 const nextConfig: NextConfig = {
   output: "export",
@@ -15,17 +15,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-// import type { NextConfig } from "next";
 
-// const nextConfig: NextConfig = {
-//   devIndicators: false,
-//   output: "export",
-//   trailingSlash: true,
-//   basePath: "/ashwath-devops-portfolio",
-//   assetPrefix: "/ashwath-devops-portfolio",
-//   images: {
-//     unoptimized: true,
-//   },
-// };
-
-// export default nextConfig;
