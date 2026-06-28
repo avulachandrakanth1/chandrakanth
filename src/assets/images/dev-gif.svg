@@ -1,0 +1,263 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 608" width="100%" height="100%" fill="none" role="img" aria-label="DevOps engineers managing CI/CD pipeline">
+  <defs>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1625"/>
+      <stop offset="100%" stop-color="#0d0b12"/>
+    </linearGradient>
+    <linearGradient id="pipeGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="screenClip1">
+      <rect x="32" y="-160" width="116" height="72" rx="4"/>
+    </clipPath>
+    <clipPath id="screenClip2">
+      <rect x="32" y="-170" width="116" height="78" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <!-- Floor shadow -->
+  <ellipse cx="450" cy="548" rx="340" ry="28" fill="#8b5cf6" opacity="0.08"/>
+
+  <!-- CI/CD Pipeline (center) -->
+  <g transform="translate(450 290)">
+    <!-- Server rack -->
+    <rect x="-52" y="-88" width="104" height="176" rx="10" fill="#18181f" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+    <rect x="-44" y="-76" width="88" height="22" rx="4" fill="#111118" stroke="rgba(139,92,246,0.25)" stroke-width="1"/>
+    <rect x="-44" y="-46" width="88" height="22" rx="4" fill="#111118" stroke="rgba(139,92,246,0.25)" stroke-width="1"/>
+    <rect x="-44" y="-16" width="88" height="22" rx="4" fill="#111118" stroke="rgba(139,92,246,0.25)" stroke-width="1"/>
+    <rect x="-44" y="14" width="88" height="22" rx="4" fill="#111118" stroke="rgba(139,92,246,0.25)" stroke-width="1"/>
+    <rect x="-44" y="44" width="88" height="22" rx="4" fill="#111118" stroke="rgba(139,92,246,0.25)" stroke-width="1"/>
+
+    <!-- Status lights -->
+    <circle cx="-34" cy="-65" r="4" fill="#22c55e">
+      <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-34" cy="-35" r="4" fill="#8b5cf6">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-34" cy="-5" r="4" fill="#22c55e">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-34" cy="25" r="4" fill="#f59e0b">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-34" cy="55" r="4" fill="#22c55e">
+      <animate attributeName="opacity" values="1;0.6;1" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Spinning gear -->
+    <g transform="translate(0 -118)">
+      <g>
+        <circle r="22" fill="#1f1f28" stroke="url(#accentGrad)" stroke-width="2"/>
+        <g fill="url(#accentGrad)">
+          <rect x="-3" y="-30" width="6" height="10" rx="2"/>
+          <rect x="-3" y="20" width="6" height="10" rx="2"/>
+          <rect x="-30" y="-3" width="10" height="6" rx="2"/>
+          <rect x="20" y="-3" width="10" height="6" rx="2"/>
+          <rect x="-22" y="-22" width="6" height="10" rx="2" transform="rotate(-45 -19 -17)"/>
+          <rect x="16" y="12" width="6" height="10" rx="2" transform="rotate(-45 19 17)"/>
+          <rect x="16" y="-22" width="6" height="10" rx="2" transform="rotate(45 19 -17)"/>
+          <rect x="-22" y="12" width="6" height="10" rx="2" transform="rotate(45 -19 17)"/>
+        </g>
+        <circle r="8" fill="#12121a"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <!-- Docker-style container -->
+    <g transform="translate(0 108)">
+      <g>
+        <rect x="-28" y="-18" width="56" height="36" rx="6" fill="#1a1625" stroke="url(#accentGrad)" stroke-width="1.5"/>
+        <rect x="-20" y="-10" width="12" height="10" rx="2" fill="#8b5cf6" opacity="0.7"/>
+        <rect x="-4" y="-10" width="12" height="10" rx="2" fill="#6366f1" opacity="0.7"/>
+        <rect x="12" y="-10" width="12" height="10" rx="2" fill="#8b5cf6" opacity="0.7"/>
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Pipeline tubes -->
+  <path d="M250 300 H360" stroke="url(#pipeGrad)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M540 300 H650" stroke="url(#pipeGrad)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M250 300 H360" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="8 12" stroke-linecap="round" opacity="0.8">
+    <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="1.2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M540 300 H650" stroke="#6366f1" stroke-width="2" stroke-dasharray="8 12" stroke-linecap="round" opacity="0.8">
+    <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="1.2s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Data packets -->
+  <circle r="5" fill="#8b5cf6" filter="url(#softGlow)">
+    <animateMotion dur="2.4s" repeatCount="indefinite" path="M250 300 H360"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="5" fill="#6366f1" filter="url(#softGlow)">
+    <animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite" path="M540 300 H650"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Left desk + Engineer 1 -->
+  <g transform="translate(130 420)">
+    <rect x="0" y="-8" width="180" height="12" rx="4" fill="#22222c"/>
+    <rect x="10" y="-90" width="8" height="82" fill="#2a2a35"/>
+    <rect x="162" y="-90" width="8" height="82" fill="#2a2a35"/>
+    <rect x="0" y="-98" width="180" height="10" rx="3" fill="#2f2f3a"/>
+
+    <!-- Monitor -->
+    <rect x="24" y="-168" width="132" height="88" rx="8" fill="#2a2a35" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+    <rect x="32" y="-160" width="116" height="72" rx="4" fill="url(#screenGrad)"/>
+    <rect x="82" y="-72" width="16" height="14" rx="2" fill="#2a2a35"/>
+    <rect x="68" y="-58" width="44" height="6" rx="3" fill="#2a2a35"/>
+
+    <!-- Terminal content -->
+    <g clip-path="url(#screenClip1)">
+      <text x="40" y="-142" fill="#22c55e" font-family="ui-monospace, monospace" font-size="10">&gt; kubectl apply -f deploy.yaml</text>
+      <text x="40" y="-124" fill="#a1a1aa" font-family="ui-monospace, monospace" font-size="10">deployment/devops-app created</text>
+      <text x="40" y="-106" fill="#8b5cf6" font-family="ui-monospace, monospace" font-size="10">pods: 3/3 running</text>
+      <rect x="40" y="-96" width="72" height="4" rx="2" fill="rgba(255,255,255,0.08)"/>
+      <rect x="40" y="-96" width="0" height="4" rx="2" fill="url(#accentGrad)">
+        <animate attributeName="width" values="0;72;72;0" keyTimes="0;0.45;0.85;1" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="132" y="-148" width="2" height="10" fill="#8b5cf6">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Engineer 1 body -->
+    <g transform="translate(58 0)">
+      <!-- Chair -->
+      <rect x="18" y="-42" width="56" height="8" rx="4" fill="#333340"/>
+      <rect x="42" y="-78" width="8" height="36" rx="3" fill="#333340"/>
+
+      <!-- Legs -->
+      <path d="M34 0 L30 38 M74 0 L78 38" stroke="#2a2a35" stroke-width="10" stroke-linecap="round"/>
+      <!-- Torso -->
+      <rect x="28" y="-72" width="52" height="58" rx="14" fill="#3b3b4a"/>
+      <rect x="36" y="-64" width="36" height="42" rx="8" fill="url(#accentGrad)" opacity="0.85"/>
+      <!-- Arms typing -->
+      <path d="M28 -48 Q8 -36 18 -18" stroke="#c4a882" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <path d="M80 -48 Q100 -36 90 -18" stroke="#c4a882" stroke-width="9" stroke-linecap="round" fill="none">
+        <animate attributeName="d" values="M80 -48 Q100 -36 90 -18;M80 -46 Q98 -34 88 -16;M80 -48 Q100 -36 90 -18" dur="0.35s" repeatCount="indefinite"/>
+      </path>
+      <!-- Head -->
+      <circle cx="54" cy="-92" r="22" fill="#d4a574"/>
+      <path d="M32 -98 Q54 -112 76 -98" fill="#2a2035"/>
+      <!-- Glasses -->
+      <rect x="38" y="-98" width="14" height="10" rx="2" fill="none" stroke="#fafafa" stroke-width="1.2" opacity="0.7"/>
+      <rect x="56" y="-98" width="14" height="10" rx="2" fill="none" stroke="#fafafa" stroke-width="1.2" opacity="0.7"/>
+      <path d="M52 -94 h4" stroke="#fafafa" stroke-width="1.2" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- Right desk + Engineer 2 -->
+  <g transform="translate(590 420)">
+    <rect x="0" y="-8" width="180" height="12" rx="4" fill="#22222c"/>
+    <rect x="10" y="-90" width="8" height="82" fill="#2a2a35"/>
+    <rect x="162" y="-90" width="8" height="82" fill="#2a2a35"/>
+    <rect x="0" y="-98" width="180" height="10" rx="3" fill="#2f2f3a"/>
+
+    <!-- Monitor -->
+    <rect x="24" y="-178" width="132" height="94" rx="8" fill="#2a2a35" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+    <rect x="32" y="-170" width="116" height="78" rx="4" fill="url(#screenGrad)"/>
+    <rect x="82" y="-76" width="16" height="14" rx="2" fill="#2a2a35"/>
+    <rect x="68" y="-62" width="44" height="6" rx="3" fill="#2a2a35"/>
+
+    <!-- Dashboard -->
+    <g clip-path="url(#screenClip2)">
+      <rect x="40" y="-162" width="36" height="24" rx="3" fill="rgba(139,92,246,0.15)" stroke="rgba(139,92,246,0.35)" stroke-width="1"/>
+      <rect x="84" y="-162" width="36" height="24" rx="3" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.35)" stroke-width="1"/>
+      <rect x="128" y="-162" width="16" height="24" rx="3" fill="rgba(99,102,241,0.15)" stroke="rgba(99,102,241,0.35)" stroke-width="1"/>
+      <text x="40" y="-120" fill="#fafafa" font-family="system-ui,sans-serif" font-size="9" font-weight="600">CI/CD Pipeline</text>
+      <rect x="40" y="-112" width="112" height="6" rx="3" fill="rgba(255,255,255,0.08)"/>
+      <rect x="40" y="-112" width="112" height="6" rx="3" fill="url(#accentGrad)">
+        <animate attributeName="width" values="24;112;112;48" keyTimes="0;0.5;0.8;1" dur="5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="44" y="-92" width="8" height="0" rx="2" fill="#8b5cf6">
+        <animate attributeName="height" values="0;22;18;22" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="-92;-114;-110;-114" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="58" y="-92" width="8" height="0" rx="2" fill="#6366f1">
+        <animate attributeName="height" values="0;14;20;14" dur="3s" begin="0.3s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="-92;-106;-112;-106" dur="3s" begin="0.3s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="72" y="-92" width="8" height="0" rx="2" fill="#22c55e">
+        <animate attributeName="height" values="0;28;24;28" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="-92;-120;-116;-120" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="86" y="-92" width="8" height="0" rx="2" fill="#8b5cf6">
+        <animate attributeName="height" values="0;18;22;18" dur="3s" begin="0.9s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="-92;-110;-114;-110" dur="3s" begin="0.9s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Engineer 2 -->
+    <g transform="translate(58 0)">
+      <rect x="18" y="-42" width="56" height="8" rx="4" fill="#333340"/>
+      <rect x="42" y="-78" width="8" height="36" rx="3" fill="#333340"/>
+      <path d="M34 0 L30 38 M74 0 L78 38" stroke="#2a2a35" stroke-width="10" stroke-linecap="round"/>
+      <rect x="28" y="-72" width="52" height="58" rx="14" fill="#3b3b4a"/>
+      <rect x="36" y="-64" width="36" height="42" rx="8" fill="#334155"/>
+      <!-- Headset -->
+      <path d="M30 -98 Q54 -118 78 -98" stroke="#8b5cf6" stroke-width="3" fill="none"/>
+      <rect x="26" y="-100" width="8" height="14" rx="3" fill="#6366f1"/>
+      <rect x="74" y="-100" width="8" height="14" rx="3" fill="#6366f1"/>
+      <!-- Pointing arm -->
+      <path d="M28 -50 Q4 -42 8 -24" stroke="#c4a882" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <path d="M80 -48 Q96 -30 88 -12" stroke="#c4a882" stroke-width="9" stroke-linecap="round" fill="none">
+        <animate attributeName="d" values="M80 -48 Q96 -30 88 -12;M80 -46 Q94 -28 90 -10;M80 -48 Q96 -30 88 -12" dur="2.5s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="54" cy="-92" r="22" fill="#b8895a"/>
+      <path d="M32 -98 Q54 -108 76 -98" fill="#1f2937"/>
+      <!-- Beard -->
+      <path d="M42 -78 Q54 -68 66 -78" fill="#3f3028" opacity="0.55"/>
+    </g>
+  </g>
+
+  <!-- Cloud infra (top) -->
+  <g transform="translate(450 88)" opacity="0.9">
+    <g>
+      <path d="M-56 0 C-56 -18 -38 -28 -22 -22 C-18 -36 0 -40 14 -30 C30 -38 48 -24 44 -6 C58 2 52 22 34 26 H-34 C-52 26 -62 12 -56 0Z" fill="#1f1f28" stroke="rgba(139,92,246,0.35)" stroke-width="1.5"/>
+      <text x="-18" y="8" fill="#a78bfa" font-family="system-ui,sans-serif" font-size="11" font-weight="600">AWS</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="4s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Floating labels -->
+  <g font-family="system-ui,sans-serif" font-size="11" font-weight="600">
+    <g transform="translate(310 210)">
+      <g>
+        <rect x="-34" y="-14" width="68" height="28" rx="14" fill="rgba(139,92,246,0.12)" stroke="rgba(139,92,246,0.3)" stroke-width="1"/>
+        <text x="0" y="4" fill="#c4b5fd" text-anchor="middle">Build</text>
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.5s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(590 210)">
+      <g>
+        <rect x="-38" y="-14" width="76" height="28" rx="14" fill="rgba(34,197,94,0.1)" stroke="rgba(34,197,94,0.28)" stroke-width="1"/>
+        <text x="0" y="4" fill="#86efac" text-anchor="middle">Deploy</text>
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.5s" begin="0.8s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Success check badge -->
+  <g transform="translate(450 420)">
+    <circle r="18" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="1.5">
+      <animate attributeName="r" values="18;20;18" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M-6 2 L-1 7 L8 -4" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+</svg>

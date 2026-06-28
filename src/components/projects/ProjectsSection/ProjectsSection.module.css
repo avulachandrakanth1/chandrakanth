@@ -1,0 +1,9 @@
+.projectsSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}

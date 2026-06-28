@@ -1,0 +1,1 @@
+export { AboutStrengths } from "./AboutStrengths";

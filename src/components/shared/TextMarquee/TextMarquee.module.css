@@ -1,0 +1,92 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-block: 0.875rem;
+  border-block: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+.slow {
+  animation-duration: 42s;
+}
+
+.fast {
+  animation-duration: 22s;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-inline: 1.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--muted);
+}
+
+.dot {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  opacity: 0.8;
+}
+
+.edgeLeft,
+.edgeRight {
+  position: absolute;
+  inset-block: 0;
+  width: 4rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.edgeLeft {
+  left: 0;
+  background: linear-gradient(90deg, var(--background), transparent);
+}
+
+.edgeRight {
+  right: 0;
+  background: linear-gradient(270deg, var(--background), transparent);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 0.75rem 1.5rem;
+  }
+
+  .wrapper {
+    padding-block: 1rem;
+  }
+}

@@ -1,0 +1,38 @@
+.aboutSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 55% 45% at 80% 20%,
+    var(--accent-glow),
+    transparent 68%
+  );
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.topGrid {
+  display: grid;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .topGrid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+}

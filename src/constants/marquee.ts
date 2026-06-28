@@ -1,0 +1,17 @@
+export const marqueeItems = [
+  "AWS",
+  "Terraform",
+  "Jenkins",
+  "Ansible",
+  "Docker",
+  "Kubernetes",
+  "Python",
+  "CI/CD",
+  "CloudWatch",
+  "Prometheus",
+  "Grafana",
+  "Lambda",
+  "EKS",
+  "Infrastructure as Code",
+  "DevOps",
+] as const;

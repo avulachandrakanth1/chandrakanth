@@ -1,0 +1,36 @@
+.heroGrid {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 2.5rem;
+  }
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .textColumn {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.visualColumn {
+  order: 1;
+}
+
+@media (min-width: 1024px) {
+  .visualColumn {
+    order: 0;
+  }
+}

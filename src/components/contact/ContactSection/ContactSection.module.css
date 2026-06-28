@@ -1,0 +1,102 @@
+.contactSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.shell {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    var(--glass-shadow),
+    inset 0 1px 0 var(--glass-highlight);
+}
+
+@media (min-width: 640px) {
+  .shell {
+    padding: 1.25rem;
+  }
+}
+
+.shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 15% 0%,
+    var(--accent-glow),
+    transparent 48%
+  );
+  pointer-events: none;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 0;
+    align-items: stretch;
+  }
+}
+
+.infoColumn,
+.formColumn {
+  position: relative;
+  padding: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .infoColumn,
+  .formColumn {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .infoColumn {
+    padding: 1rem 1.25rem 1rem 0.5rem;
+    border-right: 1px solid var(--border);
+  }
+
+  .formColumn {
+    padding: 1rem 0.5rem 1rem 1.25rem;
+  }
+}
+
+.formColumn {
+  background: color-mix(in srgb, var(--input-bg) 35%, transparent);
+  border-radius: 0.875rem;
+}
+
+@media (min-width: 1024px) {
+  .formColumn {
+    border-radius: 0 0.875rem 0.875rem 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .formColumn {
+    margin-top: 0.25rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+  }
+}
+
+.divider {
+  display: none;
+}
