@@ -6,7 +6,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 # Portfolio — Agent Guide
 
-Personal portfolio for **Pulikanti Varsha** (Full-Stack Web Developer + ML/AI). Build it like a product — premium UI, smooth animations, clean architecture.
+Personal portfolio for **Chandrakanth Avula** (Mobile & Frontend Developer — React Native, Angular, React.js, Ionic). Build it like a product — premium UI, smooth animations, clean architecture.
 
 ---
 
@@ -20,10 +20,10 @@ Read these before writing code:
 | `context/coding-standards.md` | TypeScript, React, Next.js, styling, naming, performance rules |
 | `context/ai-interaction.md` | Workflow, branching, communication, quality bar |
 | `context/current-feature.md` | Active feature tracker — update before and after every feature |
-| `context/Pulikanti_Varsha_Resume.pdf` | Full-Stack MERN resume (primary content) |
-| `context/Pulikanti_Varsha_Resume (1).pdf` | ML/AI resume (projects, certs, ML skills) |
+| `context/Chandrakanth.pdf` | Resume — primary source for all portfolio content |
+| `DEPLOYMENT.md` | GitHub Pages deployment guide & troubleshooting |
 
-**Content rule:** All copy (experience, skills, projects, achievements) comes from the resume PDFs and lives in `src/constants/`. Never hardcode resume content inside components.
+**Content rule:** All copy (experience, skills, projects, achievements) comes from the resume PDF and lives in `src/constants/`. Never hardcode resume content inside components.
 
 ---
 
@@ -35,9 +35,11 @@ Read these before writing code:
 - **Framer Motion** — primary animation library
 - **Lenis** — smooth scroll (`SmoothScrollProvider`)
 - **Lucide React** — icons (brand icons need custom SVGs — see `SocialIcon`)
-- **Deployment** — Vercel
+- **Deployment** — GitHub Pages via static export (`output: "export"`). See `DEPLOYMENT.md`.
 
 Optional: GSAP only when Framer Motion is insufficient.
+
+> **Static export constraints:** no server runtime — API routes, server actions, and `next/image` optimization are unavailable. The contact form posts directly to FormSubmit from the browser; `next.config.ts` sets `output: "export"`, `basePath: "/chandrakanth"`, and `images.unoptimized: true`.
 
 ---
 
@@ -45,18 +47,26 @@ Optional: GSAP only when Framer Motion is insufficient.
 
 ```
 src/
-├── app/                 → layout.tsx, page.tsx, globals.css
+├── app/
+│   ├── layout.tsx       → root: <html>, ThemeProvider, fonts, metadata
+│   ├── globals.css      → theme tokens, base styles, animation utilities
+│   ├── (site)/          → main site (Navbar + Footer + SmoothScrollProvider)
+│   │   ├── layout.tsx
+│   │   └── page.tsx     → single-page portfolio (all sections)
+│   └── resume/          → standalone /resume page (print-to-PDF, no site chrome)
 ├── components/
-│   ├── providers/       → SmoothScrollProvider
-│   ├── shared/          → Container, Section, Button, Navbar, Footer…
+│   ├── providers/       → SmoothScrollProvider, ThemeProvider
+│   ├── shared/          → Container, Section, Button, Navbar, Footer, ThemeToggle…
 │   ├── hero/            → ✅ done
 │   ├── about/           → ✅ done
-│   ├── skills/          → next
-│   ├── experience/
-│   ├── projects/
-│   ├── achievements/
-│   └── contact/
-├── constants/           → resume data (profile, skills, projects…)
+│   ├── skills/          → ✅ done
+│   ├── experience/      → ✅ done
+│   ├── projects/        → ✅ done
+│   ├── achievements/    → ✅ done
+│   ├── contact/         → ✅ done
+│   └── resume/          → ResumeDocument, ResumeActions (downloadable resume)
+├── constants/           → resume data (profile, skills, projects, resume…)
+├── assets/              → images (e.g. dev-gif.svg hero illustration)
 ├── hooks/
 ├── lib/                 → cn(), animation variants
 ├── types/
@@ -98,14 +108,14 @@ Live in `components/shared/`. Reuse `Container`, `Section`, `SectionHeading`, `B
 
 ## Design System
 
-- **Theme:** Dark-first (`color-scheme: dark`)
-- **Palette:** Zinc background, light foreground, violet accent (`--accent: #8b5cf6`)
-- **Style:** Minimal, glassmorphism, gradient accents, soft borders, clean spacing
+- **Theme:** Dual light/dark via `data-theme` on `<html>` (`ThemeProvider` + `ThemeToggle`); persisted in `localStorage`, theme switch uses a View Transitions circular reveal.
+- **Palette:** Professional charcoal/slate neutrals with a **teal accent** (`--accent: #2dd4bf` dark / `#0d9488` light). No gold, purple, or flashy gradients.
+- **Style:** Minimal, glassmorphism, soft borders, clean spacing, subtle teal gradients.
 - **Typography:** Geist Sans via `next/font`
 - **Motion:** 60fps target; respect `prefers-reduced-motion`
 - **Responsive:** Mobile-first → `sm` → `md` → `lg` → `xl` → `2xl`
 
-Animation presets live in `src/lib/animations.ts`. Tokens in `src/constants/animations.ts`.
+All theme colors are CSS variables in `src/app/globals.css` (`[data-theme="dark"]` / `[data-theme="light"]`). Prefer `var(--accent)` etc. over hard-coded hex so both themes stay in sync. Animation presets live in `src/lib/animations.ts`.
 
 ---
 
@@ -115,13 +125,13 @@ Animation presets live in `src/lib/animations.ts`. Tokens in `src/constants/anim
 |---------|--------|--------|
 | Hero | ✅ Done | `#hero` |
 | About | ✅ Done | `#about` |
-| Skills | 🔲 Next | `#skills` |
-| Experience | 🔲 Pending | `#experience` |
-| Projects | 🔲 Pending | `#projects` |
-| Achievements | 🔲 Pending | `#achievements` |
-| Contact | 🔲 Pending | `#contact` |
+| Skills | ✅ Done | `#skills` |
+| Experience | ✅ Done | `#experience` |
+| Projects | ✅ Done | `#projects` |
+| Achievements | ✅ Done | `#achievements` |
+| Contact | ✅ Done | `#contact` |
 
-See `context/project-overview.md` for per-section content and animation requirements.
+All sections are complete and wired into `src/app/(site)/page.tsx`. A standalone `/resume` page renders a downloadable, ATS-friendly resume. See `context/project-overview.md` for per-section content and animation requirements.
 
 ---
 
@@ -166,9 +176,13 @@ Before marking a feature complete:
 
 ```bash
 npm run dev      # Start dev server (Turbopack)
-npm run build    # Production build — required before completing features
+npm run build    # Production build / static export — required before completing features
 npm run lint     # ESLint
+npm run deploy   # Build + publish to the gh-pages branch (adds .nojekyll, -t dotfiles)
+./deploy.sh      # macOS/Linux wrapper around npm run deploy (with verification)
 ```
+
+> **Deploy note:** GitHub Pages runs Jekyll, which hides `_next/`. The deploy publishes a `.nojekyll` file via `gh-pages -t` so CSS/JS load. Full details in `DEPLOYMENT.md`.
 
 ---
 
@@ -188,12 +202,16 @@ npm run lint     # ESLint
 
 | Path | Role |
 |------|------|
-| `src/constants/profile.ts` | Name, role, socials, site config |
+| `src/constants/profile.ts` | Name, role, tagline, socials, SEO/site config |
 | `src/constants/navigation.ts` | Navbar anchor links |
 | `src/constants/skills.ts` | Skill categories |
 | `src/constants/experience.ts` | Work history |
 | `src/constants/projects.ts` | Project cards data |
 | `src/constants/achievements.ts` | Stats, education, certifications |
 | `src/constants/about.ts` | About section copy |
-| `src/app/globals.css` | Theme tokens, base styles, animation utilities |
-| `public/resume.pdf` | Downloadable resume |
+| `src/constants/resume.ts` | Content for the standalone `/resume` page |
+| `src/app/globals.css` | Theme tokens (light/dark), base styles, animation utilities |
+| `src/assets/images/dev-gif.svg` | Hero illustration (theme-colored) |
+| `next.config.ts` | Static export, `basePath`, image settings |
+| `public/resume.pdf` | Downloadable resume PDF (linked from hero) |
+| `DEPLOYMENT.md` / `deploy.sh` | Deployment guide and one-command deploy script |

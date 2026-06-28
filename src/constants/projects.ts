@@ -1,4 +1,12 @@
+import engagementRewardsImg from "@/assets/images/project-engagement-rewards.svg";
+import loyaltyMobileImg from "@/assets/images/project-loyalty-mobile.svg";
+import loyaltyRewardsImg from "@/assets/images/project-loyalty-rewards.svg";
+import tradeEngagementImg from "@/assets/images/project-trade-engagement.svg";
+
 import type { Project } from "@/types";
+
+const asSrc = (img: string | { src: string }): string =>
+  typeof img === "string" ? img : img.src;
 
 export const projectsContent = {
   label: "Projects",
@@ -9,7 +17,9 @@ export const projectsContent = {
 
 export const projects: Project[] = [
   {
-    title: "Carlsberg Bandhan",
+    // title: "Carlsberg Bandhan", // client name hidden — show features only
+    title: "Enterprise Loyalty Mobile App",
+    image: asSrc(loyaltyMobileImg),
     description:
       "Enterprise loyalty mobile platform built with React Native, with automated product validation workflows.",
     highlights: [
@@ -29,7 +39,9 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Bud4Trade",
+    // title: "Bud4Trade", // client name hidden — show features only
+    title: "Trade Engagement Platform",
+    image: asSrc(tradeEngagementImg),
     description:
       "Trade engagement application enabling partners to track schemes, rewards, and performance.",
     highlights: [
@@ -41,7 +53,9 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Greenply Samet Super Stars Club",
+    // title: "Greenply Samet Super Stars Club", // client name hidden — show features only
+    title: "Loyalty Rewards Platform",
+    image: asSrc(loyaltyRewardsImg),
     description:
       "Loyalty rewards platform enabling carpenters to earn and redeem reward points.",
     highlights: [
@@ -53,7 +67,9 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Wipro Urja",
+    // title: "Wipro Urja", // client name hidden — show features only
+    title: "Engagement & Rewards App",
+    image: asSrc(engagementRewardsImg),
     description:
       "Mobile application and admin panel for engagement and reward management programs.",
     highlights: [

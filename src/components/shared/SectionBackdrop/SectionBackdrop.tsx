@@ -9,13 +9,13 @@ interface SectionBackdropProps {
 
 const variantStyles: Record<BackdropVariant, string> = {
   violet:
-    "bg-[radial-gradient(ellipse_80%_50%_at_20%_0%,rgb(139_92_246/0.14),transparent_55%)]",
+    "bg-[radial-gradient(ellipse_80%_50%_at_20%_0%,var(--orb-1),transparent_55%)]",
   indigo:
-    "bg-[radial-gradient(ellipse_70%_45%_at_80%_10%,rgb(99_102_241/0.12),transparent_50%)]",
+    "bg-[radial-gradient(ellipse_70%_45%_at_80%_10%,var(--orb-2),transparent_50%)]",
   mixed:
-    "bg-[radial-gradient(ellipse_60%_40%_at_10%_20%,rgb(139_92_246/0.1),transparent_50%),radial-gradient(ellipse_50%_35%_at_90%_60%,rgb(99_102_241/0.08),transparent_45%)]",
+    "bg-[radial-gradient(ellipse_60%_40%_at_10%_20%,var(--orb-1),transparent_50%),radial-gradient(ellipse_50%_35%_at_90%_60%,var(--orb-2),transparent_45%)]",
   warm:
-    "bg-[radial-gradient(ellipse_65%_45%_at_50%_0%,rgb(139_92_246/0.11),transparent_55%)]",
+    "bg-[radial-gradient(ellipse_65%_45%_at_50%_0%,var(--orb-3),transparent_55%)]",
 };
 
 export function SectionBackdrop({

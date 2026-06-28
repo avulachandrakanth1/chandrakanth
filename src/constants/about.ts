@@ -14,7 +14,7 @@ export const aboutContent = {
   ],
 
   mindset:
-    "Great mobile apps aren't just screens — they're reusable architecture, smooth performance, and experiences real users trust at scale.",
+    "Great apps aren't just built — they're thoughtfully engineered to combine speed, scalability, and intuitive user experiences that help businesses grow and users stay connected.",
 
   highlights: [
     { label: "Location", value: "Bengaluru, India" },

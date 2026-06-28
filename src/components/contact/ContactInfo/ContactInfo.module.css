@@ -57,7 +57,7 @@
   height: 0.5rem;
   border-radius: 9999px;
   background: var(--accent);
-  box-shadow: 0 0 10px rgb(45 212 191 / 0.6);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 60%, transparent);
   animation: pulse 2.5s ease-in-out infinite;
 }
 

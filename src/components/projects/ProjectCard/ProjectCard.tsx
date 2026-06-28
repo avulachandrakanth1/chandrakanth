@@ -44,9 +44,22 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </span>
         <div className={styles.previewMesh} aria-hidden="true" />
         <div className={styles.previewOverlay} aria-hidden="true" />
-        <span className={styles.initial} aria-hidden="true">
-          {getInitials(project.title)}
-        </span>
+        {project.image ? (
+          <img
+            src={project.image}
+            alt=""
+            className={styles.previewImage}
+            width={200}
+            height={200}
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+        ) : (
+          <span className={styles.initial} aria-hidden="true">
+            {getInitials(project.title)}
+          </span>
+        )}
       </div>
 
       <div className={styles.body}>

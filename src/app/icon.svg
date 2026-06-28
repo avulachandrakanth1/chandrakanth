@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f172a" />
+      <stop offset="1" stop-color="#0d1117" />
+    </linearGradient>
+    <linearGradient id="accent" x1="14" y1="14" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5eead4" />
+      <stop offset="1" stop-color="#2dd4bf" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)" />
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.25" stroke-width="1" />
+  <text x="32" y="33" font-family="'Geist', 'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700" letter-spacing="-1.5" fill="url(#accent)" text-anchor="middle" dominant-baseline="central">CA</text>
+</svg>
