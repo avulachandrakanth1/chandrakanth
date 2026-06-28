@@ -1,10 +1,15 @@
 "use client";
 
 import {
+  Atom,
   Brain,
+  Braces,
   Cloud,
   Code2,
   Database,
+  GitBranch,
+  Layers,
+  Server,
   Smartphone,
   Wrench,
 } from "lucide-react";
@@ -25,8 +30,13 @@ const categoryIcons: Record<
   React.ComponentType<{ className?: string }>
 > = {
   Frontend: Code2,
-  Backend: Database,
+  React: Atom,
   Mobile: Smartphone,
+  Languages: Braces,
+  "Backend & APIs": Server,
+  Architecture: Layers,
+  Practices: GitBranch,
+  Backend: Database,
   Database: Database,
   DevOps: Cloud,
   "Tools & AI": Brain,

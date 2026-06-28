@@ -23,7 +23,7 @@ export function AboutEducation({ className }: AboutEducationProps) {
       viewport={{ once: true, margin: "-80px" }}
     >
       <motion.h3 variants={fadeInUp} className={styles.heading}>
-        {hasCertifications ? "Education & Certifications" : "Education"}
+        {hasCertifications ? "Education & Awards" : "Education"}
       </motion.h3>
 
       <div
@@ -52,7 +52,7 @@ export function AboutEducation({ className }: AboutEducationProps) {
 
         {hasCertifications && (
           <motion.div variants={fadeInUp} className={styles.certifications}>
-            <span className={styles.courseworkLabel}>Certifications</span>
+            <span className={styles.courseworkLabel}>Awards &amp; Recognition</span>
             <ul className={styles.certList}>
               {certifications.map((cert) => (
                 <li key={cert.title} className={styles.certItem}>

@@ -4,36 +4,36 @@
 [data-theme="dark"] {
   color-scheme: dark;
 
-  --background: #09090b;
-  --foreground: #fafafa;
-  --muted: #a1a1aa;
-  --muted-foreground: #71717a;
+  --background: #0d1117;
+  --foreground: #e6edf3;
+  --muted: #9aa7b4;
+  --muted-foreground: #6b7785;
   --border: rgb(255 255 255 / 0.08);
-  --accent: #8b5cf6;
-  --accent-foreground: #ede9fe;
+  --accent: #2dd4bf;
+  --accent-foreground: #042f2a;
   --surface: rgb(255 255 255 / 0.04);
-  --gradient-start: #8b5cf6;
-  --gradient-end: #6366f1;
+  --gradient-start: #5eead4;
+  --gradient-end: #2dd4bf;
 
-  --glass-bg: rgb(9 9 11 / 0.72);
+  --glass-bg: rgb(13 17 23 / 0.72);
   --glass-surface: rgb(255 255 255 / 0.05);
   --glass-surface-hover: rgb(255 255 255 / 0.09);
   --glass-border: rgb(255 255 255 / 0.1);
   --glass-highlight: rgb(255 255 255 / 0.07);
-  --glass-shadow: 0 24px 60px -28px rgb(139 92 246 / 0.28);
-  --mesh-overlay: rgb(9 9 11 / 0.35);
+  --glass-shadow: 0 24px 60px -28px rgb(13 148 136 / 0.24);
+  --mesh-overlay: rgb(13 17 23 / 0.35);
 
-  --accent-soft: rgb(139 92 246 / 0.12);
-  --accent-border: rgb(139 92 246 / 0.28);
-  --accent-glow: rgb(139 92 246 / 0.18);
-  --accent-ring: rgb(139 92 246 / 0.22);
+  --accent-soft: rgb(45 212 191 / 0.12);
+  --accent-border: rgb(45 212 191 / 0.28);
+  --accent-glow: rgb(45 212 191 / 0.18);
+  --accent-ring: rgb(45 212 191 / 0.22);
 
   --input-bg: rgb(255 255 255 / 0.04);
   --input-border: rgb(255 255 255 / 0.1);
-  --input-border-hover: rgb(139 92 246 / 0.22);
-  --input-focus-border: rgb(139 92 246 / 0.5);
-  --input-focus-ring: rgb(139 92 246 / 0.14);
-  --input-placeholder: rgb(161 161 170 / 0.85);
+  --input-border-hover: rgb(45 212 191 / 0.24);
+  --input-focus-border: rgb(45 212 191 / 0.5);
+  --input-focus-ring: rgb(45 212 191 / 0.14);
+  --input-placeholder: rgb(154 167 180 / 0.85);
 
   --success-bg: rgb(34 197 94 / 0.1);
   --success-border: rgb(34 197 94 / 0.28);
@@ -43,10 +43,10 @@
   --error-border: rgb(248 113 113 / 0.28);
   --error-text: rgb(252 165 165);
 
-  --selection-bg: rgb(139 92 246 / 0.35);
-  --orb-1: rgb(139 92 246 / 0.22);
-  --orb-2: rgb(99 102 241 / 0.16);
-  --orb-3: rgb(167 139 250 / 0.1);
+  --selection-bg: rgb(45 212 191 / 0.3);
+  --orb-1: rgb(45 212 191 / 0.18);
+  --orb-2: rgb(56 189 248 / 0.12);
+  --orb-3: rgb(94 234 212 / 0.1);
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -59,38 +59,38 @@
 [data-theme="light"] {
   color-scheme: light;
 
-  --background: #d4cde4;
-  --foreground: #16121f;
-  --muted: #4f4760;
-  --muted-foreground: #655d75;
-  --border: rgb(55 45 85 / 0.18);
-  --accent: #6d28d9;
-  --accent-foreground: #f5f3ff;
-  --surface: rgb(255 255 255 / 0.55);
-  --gradient-start: #7c3aed;
-  --gradient-end: #5b21b6;
+  --background: #f3f6f9;
+  --foreground: #0f172a;
+  --muted: #475569;
+  --muted-foreground: #64748b;
+  --border: rgb(15 23 42 / 0.12);
+  --accent: #0d9488;
+  --accent-foreground: #f0fdfa;
+  --surface: rgb(255 255 255 / 0.7);
+  --gradient-start: #0f766e;
+  --gradient-end: #0d9488;
 
-  --glass-bg: rgb(210 203 226 / 0.82);
-  --glass-surface: rgb(255 255 255 / 0.68);
-  --glass-surface-hover: rgb(252 250 255 / 0.82);
-  --glass-border: rgb(55 45 85 / 0.22);
-  --glass-highlight: rgb(255 255 255 / 0.72);
+  --glass-bg: rgb(243 246 249 / 0.82);
+  --glass-surface: rgb(255 255 255 / 0.7);
+  --glass-surface-hover: rgb(255 255 255 / 0.9);
+  --glass-border: rgb(15 23 42 / 0.12);
+  --glass-highlight: rgb(255 255 255 / 0.8);
   --glass-shadow:
-    0 22px 48px -22px rgb(91 33 182 / 0.24),
-    0 1px 2px rgb(55 45 85 / 0.08);
-  --mesh-overlay: rgb(212 205 228 / 0.84);
+    0 22px 48px -22px rgb(15 23 42 / 0.18),
+    0 1px 2px rgb(15 23 42 / 0.06);
+  --mesh-overlay: rgb(243 246 249 / 0.84);
 
-  --accent-soft: rgb(109 40 217 / 0.14);
-  --accent-border: rgb(109 40 217 / 0.3);
-  --accent-glow: rgb(124 58 237 / 0.2);
-  --accent-ring: rgb(109 40 217 / 0.18);
+  --accent-soft: rgb(13 148 136 / 0.12);
+  --accent-border: rgb(13 148 136 / 0.3);
+  --accent-glow: rgb(13 148 136 / 0.18);
+  --accent-ring: rgb(13 148 136 / 0.18);
 
-  --input-bg: rgb(255 255 255 / 0.68);
-  --input-border: rgb(55 45 85 / 0.18);
-  --input-border-hover: rgb(109 40 217 / 0.28);
-  --input-focus-border: rgb(109 40 217 / 0.5);
-  --input-focus-ring: rgb(109 40 217 / 0.12);
-  --input-placeholder: rgb(101 93 117 / 0.85);
+  --input-bg: rgb(255 255 255 / 0.8);
+  --input-border: rgb(15 23 42 / 0.14);
+  --input-border-hover: rgb(13 148 136 / 0.3);
+  --input-focus-border: rgb(13 148 136 / 0.5);
+  --input-focus-ring: rgb(13 148 136 / 0.14);
+  --input-placeholder: rgb(71 85 105 / 0.8);
 
   --success-bg: rgb(22 163 74 / 0.1);
   --success-border: rgb(22 163 74 / 0.24);
@@ -100,10 +100,10 @@
   --error-border: rgb(220 38 38 / 0.22);
   --error-text: rgb(185 28 28);
 
-  --selection-bg: rgb(124 58 237 / 0.2);
-  --orb-1: rgb(124 58 237 / 0.18);
-  --orb-2: rgb(79 70 229 / 0.12);
-  --orb-3: rgb(167 139 250 / 0.14);
+  --selection-bg: rgb(13 148 136 / 0.18);
+  --orb-1: rgb(13 148 136 / 0.16);
+  --orb-2: rgb(8 145 178 / 0.12);
+  --orb-3: rgb(45 212 191 / 0.14);
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -200,7 +200,8 @@
   }
 
   html {
-    scroll-behavior: auto;
+    /* Fallback for no-JS / reduced-motion; Lenis overrides this when active */
+    scroll-behavior: smooth;
   }
 
   body {
@@ -211,16 +212,16 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition:
-      background-color var(--duration-slow) var(--ease-out-expo),
-      color var(--duration-slow) var(--ease-out-expo);
+      background-color var(--duration-slower) var(--ease-out-expo),
+      color var(--duration-slower) var(--ease-out-expo);
   }
 
   [data-theme="light"] body {
     background-color: var(--background);
     background-image:
-      radial-gradient(ellipse 100% 70% at 50% -20%, rgb(124 58 237 / 0.14), transparent 55%),
-      radial-gradient(ellipse 70% 50% at 100% 100%, rgb(99 102 241 / 0.1), transparent 50%),
-      linear-gradient(180deg, #ddd6e8 0%, #cbc3d8 100%);
+      radial-gradient(ellipse 100% 70% at 50% -20%, rgb(13 148 136 / 0.1), transparent 55%),
+      radial-gradient(ellipse 70% 50% at 100% 100%, rgb(8 145 178 / 0.08), transparent 50%),
+      linear-gradient(180deg, #f6f9fb 0%, #e7edf3 100%);
   }
 
   section[id] {
@@ -280,12 +281,12 @@
   [data-theme="light"] .glass-card {
     background: linear-gradient(
       145deg,
-      rgb(255 255 255 / 0.82),
-      rgb(244 240 252 / 0.94)
+      rgb(255 255 255 / 0.85),
+      rgb(240 245 249 / 0.95)
     );
-    border-color: rgb(55 45 85 / 0.2);
+    border-color: rgb(15 23 42 / 0.12);
     box-shadow:
-      0 18px 42px -20px rgb(91 33 182 / 0.22),
+      0 18px 42px -20px rgb(15 23 42 / 0.18),
       inset 0 1px 0 rgb(255 255 255 / 0.9);
   }
 
@@ -328,6 +329,45 @@
   }
 }
 
+/* Lenis smooth scroll — defers scrolling to JS for inertia-based section nav. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Theme switch — circular reveal via the View Transitions API.
+   The new theme is clipped open from the toggle position (animated in JS),
+   while the old theme stays beneath it for a clean wipe. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 0;
+}
+
+::view-transition-new(root) {
+  z-index: 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -336,5 +376,11 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  ::view-transition-group(*),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
   }
 }

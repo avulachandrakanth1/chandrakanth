@@ -4,68 +4,65 @@ export const projectsContent = {
   label: "Projects",
   title: "Proof, not promises",
   description:
-    "Infrastructure and automation work from production environments — measurable impact, not slide decks.",
+    "Enterprise Angular web and hybrid mobile applications built for loyalty and engagement platforms serving 50K+ users.",
 } as const;
 
 export const projects: Project[] = [
   {
-    title: "Tata Play Fiber — CI/CD Platform",
+    title: "Carlsberg Bandhan",
     description:
-      "End-to-end CI/CD pipeline for Java applications on AWS, integrated with quality gates and automated deployments.",
+      "Enterprise loyalty mobile platform built with React Native, with automated product validation workflows.",
     highlights: [
-      "Jenkins pipelines with Git, GitHub, SonarQube, and Maven for streamlined Java application delivery.",
-      "Reduced manual setup errors by 90% through Terraform and Ansible-based infrastructure automation.",
-      "Improved deployment speed by 40% across release cycles with documented, repeatable processes.",
+      "Developed an enterprise loyalty mobile platform using React Native.",
+      "Implemented QR scanning and OCR workflows for automated product validation.",
+      "Built an admin dashboard for campaign configuration and reward management.",
+      "Managed predictable app state with Redux Toolkit and optimized REST API communication.",
     ],
-    stack: ["Jenkins", "Terraform", "Ansible", "AWS", "Maven", "SonarQube"],
+    stack: [
+      "React Native",
+      "Redux Toolkit",
+      "State Management",
+      "REST API Integration",
+      "QR Scanner",
+      "OCR Integration",
+    ],
     featured: true,
   },
   {
-    title: "Kubernetes Auto-Scaling Platform",
+    title: "Bud4Trade",
     description:
-      "Containerized application platform on Kubernetes with auto-scaling and high-availability cluster design.",
+      "Trade engagement application enabling partners to track schemes, rewards, and performance.",
     highlights: [
-      "Docker containerization deployed on Kubernetes clusters with auto-scaling policies.",
-      "Maintained 99.9% system uptime for production workloads on AWS.",
-      "Integrated monitoring and alerting for proactive capacity and health management.",
+      "Developed a trade engagement app for tracking schemes, rewards, and performance.",
+      "Implemented modules for reward redemption and engagement campaigns.",
+      "Designed scalable UI components ensuring cross-device compatibility.",
     ],
-    stack: ["Docker", "Kubernetes", "EKS", "AWS", "CloudWatch"],
+    stack: ["Angular", "TypeScript", "RxJS", "Bootstrap", "REST API"],
     featured: true,
   },
   {
-    title: "Lambda Automation & Disaster Recovery",
+    title: "Greenply Samet Super Stars Club",
     description:
-      "Serverless automation for routine operations, resource hygiene, and backup workflows on AWS.",
+      "Loyalty rewards platform enabling carpenters to earn and redeem reward points.",
     highlights: [
-      "Python Lambda functions to detect stale resources and automate routine system backups.",
-      "Enhanced disaster recovery capabilities with scheduled, hands-off backup workflows.",
-      "Reduced operational toil for the platform team across production environments.",
+      "Built a loyalty rewards platform for carpenters to earn and redeem points.",
+      "Implemented authentication, reward tracking, and purchase validation workflows.",
+      "Built reward redemption modules including e-vouchers and merchandise rewards.",
     ],
-    stack: ["AWS Lambda", "Python", "S3", "CloudWatch", "IAM"],
+    stack: ["Angular", "Ionic", "NgRx", "Firebase", "REST API"],
     featured: true,
   },
   {
-    title: "Aviva Multi-Account AWS Architecture",
+    title: "Wipro Urja",
     description:
-      "Multi-VPC AWS infrastructure for production and non-production across multiple accounts.",
+      "Mobile application and admin panel for engagement and reward management programs.",
     highlights: [
-      "Managed multiple AWS accounts with separate VPCs for production and non-production workloads.",
-      "Configured load balancers, S3 storage, security groups, NACLs, and Route53 DNS.",
-      "Terraform provisioning with Ansible configuration; Prometheus and Grafana for proactive monitoring.",
+      "Developed a mobile app and admin panel for engagement and reward programs.",
+      "Implemented QR scanning for product validation and point earning.",
+      "Built refer-and-earn and quiz engagement modules.",
+      "Implemented OTP authentication and cashback redemption workflows.",
     ],
-    stack: ["AWS", "Terraform", "Ansible", "VPC", "Prometheus", "Grafana"],
-    featured: false,
-  },
-  {
-    title: "Observability & Incident Response",
-    description:
-      "Unified monitoring stack reducing mean time to respond across cloud infrastructure and applications.",
-    highlights: [
-      "CloudWatch, Instana, Prometheus, and Grafana dashboards for infrastructure and application metrics.",
-      "Reduced incident response time by 30% through proactive alerting and SLA-based OTRS workflows.",
-      "24/7 production support with documented runbooks and ITIL-aligned operational processes.",
-    ],
-    stack: ["CloudWatch", "Instana", "Prometheus", "Grafana", "OTRS"],
+    stack: ["Angular", "Ionic", "Capacitor", "Node.js", "REST API"],
     featured: false,
   },
 ];

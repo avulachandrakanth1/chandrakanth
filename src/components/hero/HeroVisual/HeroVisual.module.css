@@ -30,14 +30,14 @@
   pointer-events: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .frame {
     max-width: none;
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .frame {
-    max-width: 18rem;
+    max-width: 20rem;
   }
 }

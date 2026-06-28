@@ -243,21 +243,21 @@
 }
 
 .theme0 .previewMesh {
-  background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 50%, #312e81 100%);
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 50%, #134e4a 100%);
 }
 
 .theme1 .previewMesh {
-  background: linear-gradient(135deg, #0891b2 0%, #2563eb 55%, #1e1b4b 100%);
+  background: linear-gradient(135deg, #0e7490 0%, #155e75 55%, #0f2942 100%);
 }
 
 .theme2 .previewMesh {
-  background: linear-gradient(135deg, #9333ea 0%, #db2777 50%, #312e81 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 50%, #0f172a 100%);
 }
 
 .theme3 .previewMesh {
-  background: linear-gradient(135deg, #059669 0%, #0d9488 55%, #134e4a 100%);
+  background: linear-gradient(135deg, #115e59 0%, #134e4a 55%, #0f172a 100%);
 }
 
 .theme4 .previewMesh {
-  background: linear-gradient(135deg, #ea580c 0%, #dc2626 50%, #431407 100%);
+  background: linear-gradient(135deg, #334155 0%, #1e293b 50%, #0f172a 100%);
 }

@@ -96,20 +96,43 @@ export function ContactForm({ className }: ContactFormProps) {
     setServerError("");
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `https://formsubmit.co/ajax/${encodeURIComponent(profile.email)}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name.trim(),
+            email: formData.email.trim(),
+            message: formData.message.trim(),
+            _subject: `Portfolio inquiry from ${formData.name.trim()}`,
+            _template: "table",
+            _captcha: "false",
+          }),
+        },
+      );
 
       const result = (await response.json()) as {
-        ok?: boolean;
-        error?: string;
+        success?: string | boolean;
+        message?: string;
       };
 
-      if (!response.ok || !result.ok) {
+      const message = result.message ?? "";
+      const needsActivation = /activation/i.test(message);
+
+      // FormSubmit's one-time owner activation is invisible to visitors:
+      // treat it as a successful send so they only ever see success/error.
+      const succeeded =
+        needsActivation ||
+        (response.ok &&
+          (result.success === "true" || result.success === true));
+
+      if (!succeeded) {
         setStatus("error");
-        setServerError(result.error ?? "Could not send your message.");
+        setServerError(message || "Could not send your message right now.");
         return;
       }
 

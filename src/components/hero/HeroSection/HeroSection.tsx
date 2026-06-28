@@ -9,10 +9,10 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[88svh] items-center overflow-hidden pt-20"
+      className="relative overflow-hidden pt-24 pb-14 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20"
     >
       <HeroBackground />
-      <Container className="relative py-10 sm:py-12 lg:py-14">
+      <Container className="relative">
         <div className={styles.heroGrid}>
           <div className={styles.textColumn}>
             <HeroContent />

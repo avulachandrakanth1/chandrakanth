@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import Script from "next/script";
 
-import { Navbar } from "@/components/shared/Navbar";
-import { Footer } from "@/components/shared/Footer";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { siteConfig } from "@/constants/site";
 
@@ -69,11 +67,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="min-h-full font-sans antialiased">
-        <ThemeProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

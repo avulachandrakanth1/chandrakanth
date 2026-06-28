@@ -83,7 +83,7 @@
   flex-shrink: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .actions {
     display: flex;
   }
@@ -96,7 +96,7 @@
   flex-shrink: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .mobileActions {
     display: none;
   }

@@ -4,43 +4,54 @@ export const achievementsContent = {
   label: "Achievements",
   title: "Numbers with context",
   description:
-    "Outcomes from production environments — reliability, speed, and operational excellence you can measure.",
+    "Outcomes from production mobile work — scale, reliability, and delivery you can measure.",
 } as const;
 
 export const achievements: Achievement[] = [
   {
     value: "4+",
     label: "Years Experience",
-    description: "AWS DevOps across enterprise telecom and insurance cloud projects",
+    description: "Building scalable cross-platform and hybrid mobile applications",
   },
   {
-    value: "99.9%",
-    label: "System Uptime",
-    description: "Kubernetes deployments with auto-scaling on production workloads",
+    value: "50K+",
+    label: "Users Served",
+    description: "Across loyalty and engagement platforms in production",
   },
   {
-    value: "90%",
-    label: "Fewer Setup Errors",
-    description: "Infrastructure automation with Terraform and Ansible at TCS",
+    value: "9+",
+    label: "Apps Delivered",
+    description: "Production web and hybrid mobile applications shipped",
   },
   {
-    value: "40%",
-    label: "Faster Deployments",
-    description: "CI/CD pipeline optimization with Jenkins and automated provisioning",
+    value: "30%",
+    label: "Faster Performance",
+    description: "Via lazy loading, optimized APIs, and efficient rendering",
   },
 ];
 
 export const education: Education = {
-  degree: "Bachelor of Engineering (Civil)",
-  institution: "Reva University, Bangalore",
-  duration: "Graduated: June 2020 · CGPA 7.2",
+  degree: "Bachelor of Technology – Electronics & Communication Engineering",
+  institution: "Yogi Vemana University",
+  duration: "2017 — 2021",
   coursework: [
-    "Engineering Mathematics",
-    "Structural Analysis",
-    "Geotechnical Engineering",
-    "Project Management",
-    "Environmental Engineering",
+    "Digital Electronics",
+    "Signals & Systems",
+    "Microprocessors",
+    "Communication Systems",
+    "Programming Fundamentals",
   ],
 };
 
-export const certifications: Certification[] = [];
+export const certifications: Certification[] = [
+  {
+    title: "Above & Beyond Award",
+    issuer: "Bigcity Promotions",
+    year: "2024",
+  },
+  {
+    title: "Hackathon Runner-Up",
+    issuer: "Bigcity Promotions",
+    year: "2025",
+  },
+];

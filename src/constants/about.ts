@@ -2,62 +2,63 @@ import type { AboutHighlight, AboutStrength } from "@/types";
 
 export const aboutContent = {
   label: "About Me",
-  title: "Cloud infrastructure that ships and stays up",
+  title: "Mobile apps that ship and scale",
   description:
-    "Four years in AWS DevOps — automating provisioning, hardening CI/CD, and keeping production reliable around the clock.",
+    "Four years building scalable mobile applications — cross-platform with React Native, hybrid with Ionic, performance-focused and shipped to 50K+ users.",
 
   summary: [
-    "I'm an AWS DevOps Engineer with 4 years of hands-on experience building and maintaining cloud infrastructure for enterprise clients. At TCS on the Tata Play Fiber project, I automated AWS provisioning with Terraform and Ansible — cutting manual setup errors by 90% and improving deployment speed by 40%.",
-    "I design and manage CI/CD pipelines in Jenkins integrated with Git, GitHub, SonarQube, and Maven for Java application delivery. I've containerized workloads with Docker, deployed them on Kubernetes with auto-scaling, and maintained 99.9% system uptime while monitoring with CloudWatch, Instana, Prometheus, and Grafana.",
-    "Previously at Deduce Technology on the Aviva project, I supported multi-account AWS environments, managed VPCs, load balancers, and Terraform-based infrastructure. I'm available for immediate joining and passionate about secure, cost-effective, and observable DevOps solutions.",
+    "I'm a Mobile Application Developer with 4+ years of experience building scalable cross-platform and hybrid mobile applications. At Bigcity Promotions, I've delivered 9+ production apps serving 50K+ users across loyalty and engagement platforms — architecting modular, component-based structures that improve maintainability and scalability.",
+    "I build with React Native, Angular, and Ionic using TypeScript, and manage state with Redux Toolkit and NgRx. I've developed 20+ reusable UI components to accelerate delivery and improved app performance by 30% through lazy loading, optimized REST API communication, and efficient rendering — while integrating QR scanning, OCR, push notifications, and OTP authentication via Capacitor.",
+    "On the backend, I develop RESTful APIs with Node.js and Express.js to support my mobile and web apps. I work in Agile teams using Zoho Sprints, maintain a 90% average sprint completion rate, mentor junior developers, and keep code quality high through Git workflows, debugging, and peer code reviews.",
+    "I fast-track development using AI-assisted workflows while maintaining context efficiently to optimize productivity and minimize token usage.",
   ],
 
   mindset:
-    "Reliable infrastructure isn't just about tools — it's about automation, observability, and teams that can ship with confidence.",
+    "Great mobile apps aren't just screens — they're reusable architecture, smooth performance, and experiences real users trust at scale.",
 
   highlights: [
-    { label: "Location", value: "Whitefield, Bangalore" },
-    { label: "Education", value: "B.E · Reva University" },
+    { label: "Location", value: "Bengaluru, India" },
+    { label: "Education", value: "B.Tech ECE · Yogi Vemana University" },
     { label: "Experience", value: "4+ Years" },
-    { label: "Availability", value: "Immediate joining" },
+    { label: "Availability", value: "Open to opportunities" },
   ] satisfies AboutHighlight[],
 } as const;
 
 export const coreStrengths: AboutStrength[] = [
   {
-    title: "CI/CD & Release Engineering",
+    title: "Cross-Platform Mobile",
     description:
-      "Jenkins pipelines integrated with Git, GitHub, Maven, and SonarQube — automated builds, blue/green and canary deployments across the SDLC.",
+      "React Native with Redux Toolkit and Context API — building cross-platform mobile apps with reusable components and predictable state.",
     icon: "rocket",
   },
   {
-    title: "AWS Cloud Infrastructure",
+    title: "Hybrid Mobile Development",
     description:
-      "EC2, S3, IAM, VPC, RDS, Lambda, Route53, and CloudWatch — secure, scalable multi-account setups for production and non-production.",
-    icon: "cloud",
-  },
-  {
-    title: "Infrastructure as Code",
-    description:
-      "Terraform and Ansible for provisioning and configuration — reducing manual setup errors by 90% and accelerating delivery by 40%.",
+      "Ionic, Capacitor, and Cordova — QR scanning, OCR extraction, push notifications, and OTP authentication for production mobile apps.",
     icon: "code",
   },
   {
-    title: "Containers & Orchestration",
+    title: "State Management",
     description:
-      "Docker containerization on Kubernetes and EKS with auto-scaling, ECR image management, and high-availability cluster design.",
-    icon: "shield",
-  },
-  {
-    title: "Monitoring & Observability",
-    description:
-      "CloudWatch, Instana, Prometheus, and Grafana dashboards — proactive alerting that cut incident response time by 30%.",
+      "Redux, Redux Toolkit, Context API, RxJS, and NgRx for predictable, scalable state across mobile and web applications.",
     icon: "brain",
   },
   {
-    title: "Production Operations",
+    title: "Performance Optimization",
     description:
-      "24/7 support, SLA-based incident management via OTRS, ITIL processes, and Lambda scripts for backups and stale resource cleanup.",
+      "Improved app performance by 30% via lazy loading, optimized REST API communication, and efficient rendering across devices.",
+    icon: "shield",
+  },
+  {
+    title: "Reusable UI Architecture",
+    description:
+      "Developed 20+ reusable UI components and responsive, cross-browser interfaces that cut development time for new features.",
+    icon: "cloud",
+  },
+  {
+    title: "Backend & Collaboration",
+    description:
+      "RESTful APIs with Node.js and Express.js, Agile delivery via Zoho Sprints, peer code reviews, and mentoring junior developers.",
     icon: "book",
   },
 ];

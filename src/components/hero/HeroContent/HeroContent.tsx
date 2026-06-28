@@ -19,12 +19,16 @@ export function HeroContent() {
       animate="visible"
       className="relative z-10 flex w-full flex-col"
     >
-      <motion.p
+      <motion.span
         variants={blurFadeInUp}
-        className="mb-3 text-sm font-medium tracking-widest text-accent uppercase"
+        className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/10 px-3 py-1.5 text-xs font-medium tracking-wide text-accent"
       >
-        Welcome to my portfolio
-      </motion.p>
+        <span className="relative flex h-2 w-2">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+        </span>
+        Available for Mobile &amp; Frontend Developer roles
+      </motion.span>
 
       <motion.h1
         variants={blurFadeInUp}
@@ -53,7 +57,7 @@ export function HeroContent() {
         className="mt-7 flex w-full max-w-md flex-col gap-3 sm:flex-row sm:items-center lg:max-w-none"
       >
         <Button href="#projects" size="lg" className="btn-shine w-full sm:w-auto">
-          View My Work
+          Explore My Work
         </Button>
         <Button
           href={profile.resumeUrl}
@@ -69,7 +73,7 @@ export function HeroContent() {
 
       <motion.div
         variants={blurFadeInUp}
-        className="mt-7 flex items-center justify-center gap-3 lg:justify-start"
+        className="mt-7 flex items-center justify-center gap-3 sm:justify-start"
       >
         {profile.socials.map((social) => (
           <motion.a

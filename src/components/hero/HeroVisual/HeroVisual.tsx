@@ -32,7 +32,7 @@ export function HeroVisual({ className }: HeroVisualProps) {
       >
         <img
           src={illustrationSrc}
-          alt="DevOps engineers managing CI/CD pipeline illustration"
+          alt="Mobile application developer building cross-platform apps illustration"
           className={styles.image}
           width={900}
           height={608}

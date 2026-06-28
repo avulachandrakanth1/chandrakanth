@@ -1,0 +1,249 @@
+.page {
+  min-height: 100vh;
+  background: #18181b;
+  padding: 2.5rem 1rem 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sheet {
+  width: 100%;
+  max-width: 850px;
+  background: #ffffff;
+  color: #1a1a1a;
+  padding: 48px 56px;
+  border-radius: 6px;
+  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.6);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+/* ---------- Header ---------- */
+.header {
+  border-bottom: 2px solid #1a1a1a;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+}
+
+.name {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #111111;
+}
+
+.title {
+  margin: 4px 0 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #4338ca;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 12px;
+  color: #333333;
+}
+
+.contactItem {
+  white-space: nowrap;
+}
+
+.contactItem a {
+  color: #333333;
+  text-decoration: none;
+}
+
+.contactSep {
+  color: #999999;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  margin-top: 18px;
+}
+
+.sectionTitle {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #111111;
+  border-bottom: 1px solid #d4d4d8;
+  padding-bottom: 4px;
+}
+
+.summary {
+  margin: 0;
+  color: #2a2a2a;
+}
+
+.competencies {
+  margin: 0;
+  color: #2a2a2a;
+}
+
+/* ---------- Skills ---------- */
+.skillGrid {
+  display: grid;
+  gap: 5px 24px;
+}
+
+.skillRow {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 8px;
+}
+
+.skillCategory {
+  font-weight: 700;
+  color: #111111;
+}
+
+.skillItems {
+  color: #2a2a2a;
+}
+
+/* ---------- Experience ---------- */
+.job {
+  margin-bottom: 12px;
+}
+
+.jobHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.role {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.company {
+  font-weight: 600;
+  color: #4338ca;
+}
+
+.meta {
+  font-size: 12px;
+  color: #555555;
+  white-space: nowrap;
+}
+
+.bullets {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.bullets li {
+  margin-bottom: 3px;
+  color: #2a2a2a;
+}
+
+/* ---------- Projects ---------- */
+.project {
+  margin-bottom: 11px;
+}
+
+.projectName {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.stack {
+  margin: 1px 0 3px;
+  font-size: 12px;
+  font-style: italic;
+  color: #4338ca;
+}
+
+/* ---------- Education ---------- */
+.eduItem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.eduDegree {
+  font-weight: 600;
+  color: #111111;
+}
+
+.eduInstitution {
+  color: #2a2a2a;
+}
+
+.eduMeta {
+  font-size: 12px;
+  color: #555555;
+}
+
+.achievements {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.achievements li {
+  margin-bottom: 3px;
+  color: #2a2a2a;
+}
+
+/* ---------- Print ---------- */
+@media print {
+  .page {
+    min-height: 0;
+    background: #ffffff;
+    padding: 0;
+    display: block;
+  }
+
+  .sheet {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 10.5pt;
+    color: #000000;
+  }
+
+  .name {
+    font-size: 20pt;
+  }
+
+  .section {
+    break-inside: avoid;
+  }
+
+  .job,
+  .project {
+    break-inside: avoid;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 14mm 14mm;
+}
+
+@media (max-width: 640px) {
+  .sheet {
+    padding: 28px 22px;
+    font-size: 13px;
+  }
+
+  .skillRow {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}

@@ -11,15 +11,27 @@ import {
 
 export type Theme = "dark" | "light";
 
+export interface ThemeOrigin {
+  x: number;
+  y: number;
+}
+
 interface ThemeContextValue {
   theme: Theme;
-  setTheme: (theme: Theme) => void;
-  toggleTheme: () => void;
+  setTheme: (theme: Theme, origin?: ThemeOrigin) => void;
+  toggleTheme: (origin?: ThemeOrigin) => void;
 }
+
+type DocumentWithViewTransition = Document & {
+  startViewTransition?: (callback: () => void) => {
+    ready: Promise<void>;
+  };
+};
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 const STORAGE_KEY = "portfolio-theme";
+const TRANSITION_DURATION = 900;
 
 function applyTheme(theme: Theme): void {
   document.documentElement.setAttribute("data-theme", theme);
@@ -37,6 +49,10 @@ function getInitialTheme(): Theme {
     : "dark";
 }
 
+function prefersReducedMotion(): boolean {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setThemeState] = useState<Theme>("dark");
 
@@ -46,20 +62,57 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     applyTheme(initial);
   }, []);
 
-  const setTheme = useCallback((next: Theme) => {
-    setThemeState(next);
-    localStorage.setItem(STORAGE_KEY, next);
-    applyTheme(next);
-  }, []);
-
-  const toggleTheme = useCallback(() => {
-    setThemeState((prev) => {
-      const next: Theme = prev === "dark" ? "light" : "dark";
+  const setTheme = useCallback((next: Theme, origin?: ThemeOrigin) => {
+    const commit = () => {
+      setThemeState(next);
       localStorage.setItem(STORAGE_KEY, next);
       applyTheme(next);
-      return next;
-    });
+    };
+
+    const doc = document as DocumentWithViewTransition;
+
+    if (typeof doc.startViewTransition !== "function" || prefersReducedMotion()) {
+      commit();
+      return;
+    }
+
+    const transition = doc.startViewTransition(commit);
+
+    if (!origin) return;
+
+    transition.ready
+      .then(() => {
+        const { x, y } = origin;
+        const endRadius = Math.hypot(
+          Math.max(x, window.innerWidth - x),
+          Math.max(y, window.innerHeight - y),
+        );
+
+        document.documentElement.animate(
+          {
+            clipPath: [
+              `circle(0px at ${x}px ${y}px)`,
+              `circle(${endRadius}px at ${x}px ${y}px)`,
+            ],
+          },
+          {
+            duration: TRANSITION_DURATION,
+            easing: "cubic-bezier(0.16, 1, 0.3, 1)",
+            pseudoElement: "::view-transition-new(root)",
+          },
+        );
+      })
+      .catch(() => {
+        /* transition was skipped or interrupted — colors already applied */
+      });
   }, []);
+
+  const toggleTheme = useCallback(
+    (origin?: ThemeOrigin) => {
+      setTheme(theme === "dark" ? "light" : "dark", origin);
+    },
+    [theme, setTheme],
+  );
 
   const value = useMemo(
     () => ({ theme, setTheme, toggleTheme }),
